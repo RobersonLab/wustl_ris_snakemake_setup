@@ -1,0 +1,15 @@
+# rule - all
+mylist = [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p' ]
+
+rule all:
+	input:
+		expand( r'output/{name}.txt', name = mylist )
+
+rule touch:
+	output:
+		r"output/{name}.txt"
+	threads: 1
+	resources:
+		mem_mb = 4096
+	shell:
+		"touch {output}"
