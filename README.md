@@ -15,6 +15,8 @@ The scratch space (which should be considered volatile) is the only storage suit
 
 For these reasons, you should run projects in your scratch space, then move the data to the Active tier for review and sharing.
 
+**CRITICALLY IMPORTANT WARNING** The scratch space will periodically have "old" files deleted automatically. Once you have generated data you don't want to lose, it is highly recommended that you be sure to rsync the data to your Active tier storage.
+
 ## Global setup
 
 ### Installing Snakemake
